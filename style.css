@@ -1,10 +1,16 @@
-* {
+/* Define o box-sizing para incluir padding e borda nas dimensões dos elementos.
+   Remove margens e preenchimentos padrão, e define a cor do texto como branca. */
+   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     color: white;
 }
 
+/* Estilo para o corpo da página.
+   Aplica um gradiente de fundo que vai de #1354A5 (azul escuro) a #01080E (quase preto).
+   Configura a altura da página como 100% da altura da viewport (100vh), 
+   centralizando seu conteúdo horizontal e verticalmente. */
 body {
     background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
     height: 100vh;
@@ -13,7 +19,9 @@ body {
     justify-content: center;
 }
 
-
+/* Pseudo-elemento antes do corpo da página.
+   Adiciona uma imagem de fundo com opacidade de 0.4 para sobreposição suave.
+   A imagem é posicionada à direita e cobre toda a área da página. */
 body::before {
     background-image: url("img/code.png");
     background-repeat: no-repeat;
@@ -26,6 +34,11 @@ body::before {
     opacity: 0.4;
 }
 
+/* Estiliza um container com largura de 1200px e altura de 600px.
+   Alinha o conteúdo no centro, horizontal e verticalmente.
+   Aplica um raio nas bordas (24px), uma borda sólida de 1px e uma sombra leve.
+   A imagem de fundo "Ruido.png" preenche o container por completo (background-size: 100% 100%).
+   A posição é relativa para permitir a utilização de elementos posicionados dentro do container. */
 .container {
     width: 1200px;
     height: 600px;
@@ -40,6 +53,7 @@ body::before {
     position: relative;
 }
 
+/* Define um bloco flexível no fundo do container, alinhado ao centro horizontalmente. */
 .container__conteudo {
     display: flex;
     align-items: center;
@@ -47,11 +61,15 @@ body::before {
     bottom: 0;
 }
 
+/* Estiliza a área de informações dentro do container, com preenchimento de 20px em todos os lados. */
 .container__informacoes {
     flex: 1;
     padding: 20px;
 }
 
+/* Estiliza o botão dentro do container.
+   Define bordas arredondadas, cor de fundo azul, preenchimento, largura total e tamanho da fonte.
+   Remove borda padrão e adiciona uma margem superior de 16px. */
 .container__botao {
     border-radius: 16px;
     background: #1875E8;
@@ -63,25 +81,30 @@ body::before {
     margin-top: 16px;
 }
 
+/* Define margens verticais de 16px para o texto dentro do container. */
 .container__texto {
     margin: 16px 0 16px 0;
 }
 
+/* Define a cor azul (#1875E8) para um texto específico dentro do container. */
 .container__texto-azul {
     color: #1875E8;
 }
 
+/* Estiliza o título h1 com a fonte 'Chakra Petch' e tamanho de 72px. */
 h1 {
     font-family: 'Chakra Petch', sans-serif;
     font-size: 72px;
 }
 
+/* Define a fonte 'Inter' para h2, parágrafos e botões. */
 h2,
 p,
 button {
     font-family: 'Inter', sans-serif;
 }
 
+/* Estiliza o título h2 com tamanho de 32px e peso de fonte 400 (normal). */
 h2 {
     font-size: 32px;
     font-weight: 400;

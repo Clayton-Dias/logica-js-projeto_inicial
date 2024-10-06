@@ -2,29 +2,58 @@
 <html lang="en">
 
 <head>
+    <!-- Define o conjunto de caracteres do documento como UTF-8, garantindo compatibilidade com caracteres especiais. -->
     <meta charset="UTF-8">
+    
+    <!-- Configura a viewport para dispositivos móveis, garantindo que a página seja responsiva. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Pré-conecta ao Google Fonts para melhorar o desempenho ao carregar as fontes. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Importa duas fontes do Google Fonts: 'Chakra Petch' e 'Inter' com pesos 400 e 700. -->
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
         rel="stylesheet">
+    
+    <!-- Conecta o arquivo CSS externo, `style.css`, para aplicar o estilo à página. -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Define o título da página como "JS Game", que aparece na aba do navegador. -->
     <title>JS Game</title>
 </head>
 
 <body>
+    <!-- Cria um container principal para o conteúdo da página. -->
     <div class="container">
+        
+        <!-- Define uma seção para o conteúdo principal do container, que inclui a imagem e as informações. -->
         <div class="container__conteudo">
+            
+            <!-- Exibe uma imagem de um robô mergulhador com a classe "container__imagem-robo" para estilos específicos. -->
             <img src="./img/robot.png" alt="robô mergulhador" class="container__imagem-robo" />
+            
+            <!-- Cria uma div para as informações textuais e adicionais, como ícones. -->
             <div class="container__informacoes">
+                
+                <!-- Exibe uma imagem de um troféu com um ícone decorativo, sem estilos adicionais. -->
                 <img src="./img/trophy.png" alt="ícone de um troféu" />
-                 <div class="container__texto">
+                
+                <!-- Seção de texto que inclui o título principal e um subtítulo. -->
+                <div class="container__texto">
+                    
+                    <!-- O título principal indica "Você acertou!" com uma parte do texto ("acertou!") estilizada em azul. -->
                     <h1>Você <span class="container__texto-azul">acertou!</span></h1>
+                    
+                    <!-- Subtítulo que informa ao usuário que ele descobriu o número secreto. -->
                     <h2>Você descobriu o número secreto!</h2>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Conecta o arquivo JavaScript `app.js` para funcionalidade interativa. O atributo `defer` garante que o script
+         será executado apenas após o carregamento completo do HTML, melhorando o desempenho. -->
     <script src="app.js" defer></script>
 </body>
 

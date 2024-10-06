@@ -1,10 +1,10 @@
 /* Define o box-sizing para incluir padding e borda nas dimensões dos elementos.
    Remove margens e preenchimentos padrão, e define a cor do texto como branca. */
    * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+    box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura dos elementos */
+    margin: 0; /* Remove margens padrão dos elementos */
+    padding: 0; /* Remove preenchimentos padrão dos elementos */
+    color: white; /* Define a cor do texto como branca */
 }
 
 /* Estilo para o corpo da página.
@@ -12,26 +12,26 @@
    Configura a altura da página como 100% da altura da viewport (100vh), 
    centralizando seu conteúdo horizontal e verticalmente. */
 body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%); /* Gradiente de fundo */
+    height: 100vh; /* Altura da página igual à altura da viewport */
+    display: flex; /* Usado para centralizar o conteúdo com flexbox */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: center; /* Alinha o conteúdo horizontalmente ao centro */
 }
 
 /* Pseudo-elemento antes do corpo da página.
    Adiciona uma imagem de fundo com opacidade de 0.4 para sobreposição suave.
    A imagem é posicionada à direita e cobre toda a área da página. */
 body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
+    background-image: url("img/code.png"); /* Imagem de fundo */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    background-position: right; /* Posiciona a imagem à direita */
+    content: ""; /* Necessário para criar o pseudo-elemento */
+    display: block; /* Exibe o pseudo-elemento como um bloco */
+    position: absolute; /* Posiciona o elemento de forma absoluta */
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    opacity: 0.4; /* Define a opacidade da imagem de fundo */
 }
 
 /* Estiliza um container com largura de 1200px e altura de 600px.
@@ -40,72 +40,72 @@ body::before {
    A imagem de fundo "Ruido.png" preenche o container por completo (background-size: 100% 100%).
    A posição é relativa para permitir a utilização de elementos posicionados dentro do container. */
 .container {
-    width: 1200px;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
+    width: 1200px; /* Largura fixa do container */
+    height: 600px; /* Altura fixa do container */
+    display: flex; /* Usado para alinhar o conteúdo com flexbox */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    justify-content: space-between; /* Distribui o espaço entre os itens do container */
+    border-radius: 24px; /* Bordas arredondadas */
+    border: 1px solid #1875E8; /* Borda sólida azul */
+    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15); /* Sombra leve ao redor do container */
+    background-image: url("img/Ruido.png"); /* Imagem de fundo do container */
+    background-size: 100% 100%; /* Faz a imagem de fundo cobrir todo o container */
+    position: relative; /* Permite que elementos internos sejam posicionados relativamente */
 }
 
 /* Define um bloco flexível no fundo do container, alinhado ao centro horizontalmente. */
 .container__conteudo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
+    display: flex; /* Usado para alinhar o conteúdo com flexbox */
+    align-items: center; /* Alinha o conteúdo verticalmente ao centro */
+    position: absolute; /* Permite o posicionamento absoluto dentro do container */
+    bottom: 0; /* Posiciona o conteúdo na parte inferior do container */
 }
 
 /* Estiliza a área de informações dentro do container, com preenchimento de 20px em todos os lados. */
 .container__informacoes {
-    flex: 1;
-    padding: 20px;
+    flex: 1; /* Permite que a área ocupe o espaço disponível */
+    padding: 20px; /* Preenchimento interno */
 }
 
 /* Estiliza o botão dentro do container.
    Define bordas arredondadas, cor de fundo azul, preenchimento, largura total e tamanho da fonte.
    Remove borda padrão e adiciona uma margem superior de 16px. */
 .container__botao {
-    border-radius: 16px;
-    background: #1875E8;
-    padding: 16px 24px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    margin-top: 16px;
+    border-radius: 16px; /* Bordas arredondadas */
+    background: #1875E8; /* Cor de fundo azul */
+    padding: 16px 24px; /* Preenchimento interno */
+    width: 100%; /* Largura total do botão */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: 700; /* Peso da fonte em negrito */
+    border: none; /* Remove a borda padrão */
+    margin-top: 16px; /* Margem superior */
 }
 
 /* Define margens verticais de 16px para o texto dentro do container. */
 .container__texto {
-    margin: 16px 0 16px 0;
+    margin: 16px 0; /* Margens verticais */
 }
 
 /* Define a cor azul (#1875E8) para um texto específico dentro do container. */
 .container__texto-azul {
-    color: #1875E8;
+    color: #1875E8; /* Cor do texto azul */
 }
 
 /* Estiliza o título h1 com a fonte 'Chakra Petch' e tamanho de 72px. */
 h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
+    font-family: 'Chakra Petch', sans-serif; /* Fonte do título */
+    font-size: 72px; /* Tamanho da fonte */
 }
 
 /* Define a fonte 'Inter' para h2, parágrafos e botões. */
 h2,
 p,
 button {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif; /* Fonte padrão para estes elementos */
 }
 
 /* Estiliza o título h2 com tamanho de 32px e peso de fonte 400 (normal). */
 h2 {
-    font-size: 32px;
-    font-weight: 400;
+    font-size: 32px; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte normal */
 }
